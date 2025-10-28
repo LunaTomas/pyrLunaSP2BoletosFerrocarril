@@ -101,6 +101,7 @@
             FormBorderStyle = FormBorderStyle.FixedDialog;
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "frmPrincipal";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Precios de los boletos de ferrocarril";
             ((System.ComponentModel.ISupportInitialize)nudDias).EndInit();
             ResumeLayout(false);
