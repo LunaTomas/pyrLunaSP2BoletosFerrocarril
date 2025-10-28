@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipal));
             lblDistancia = new Label();
             txtDistancia = new TextBox();
             txtDias = new Label();
@@ -53,6 +54,7 @@
             txtDistancia.Name = "txtDistancia";
             txtDistancia.Size = new Size(100, 33);
             txtDistancia.TabIndex = 1;
+            txtDistancia.KeyPress += txtDistancia_KeyPress;
             // 
             // txtDias
             // 
@@ -96,6 +98,8 @@
             Controls.Add(txtDias);
             Controls.Add(txtDistancia);
             Controls.Add(lblDistancia);
+            FormBorderStyle = FormBorderStyle.FixedDialog;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "frmPrincipal";
             Text = "Precios de los boletos de ferrocarril";
             ((System.ComponentModel.ISupportInitialize)nudDias).EndInit();

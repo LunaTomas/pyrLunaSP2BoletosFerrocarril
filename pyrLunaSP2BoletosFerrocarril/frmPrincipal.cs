@@ -40,5 +40,14 @@ namespace pyrLunaSP2BoletosFerrocarril
             // Mostrar el resultado
             MessageBox.Show($"El precio del boleto es: ${precioBase}", "Resultado", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
+        private void txtDistancia_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //hacer que no se puedan ingresar letras
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '.')
+            {
+                e.Handled = true;
+            }
+        }
     }
 }
